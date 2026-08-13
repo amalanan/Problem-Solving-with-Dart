@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 
 void main() {
   /* #1 dart progra to check whether an alphabet is a vowel or a consonant */
@@ -55,5 +56,39 @@ void main() {
   //   print('$num1 and $num2 are not multiplied');
   // }
 
-  /* program
+  // #5 program to check given number is prime or not
+  // print('Enter a number: ');
+  // int number = int.parse(stdin.readLineSync()!);
+  // bool isPrime = true;
+  //
+  // if (number == 1) {
+  //   isPrime = false;
+  // } else {
+  //   for (int i = 2; i <= sqrt(number); i++) {
+  //     if (number % i == 0) {
+  //       isPrime = false;
+  //       break;
+  //     }
+  //   }
+  // }
+  // if (isPrime) {
+  //   print('$number is a prime number');
+  // } else {
+  //   print('$number is not a prime number');
+  // }
+
+  //#6 program to find the max number between 3 numbers
+  print('Enter three integers');
+  int num1 = int.parse(stdin.readLineSync()!);
+  int num2 = int.parse(stdin.readLineSync()!);
+  int num3 = int.parse(stdin.readLineSync()!);
+
+  int max = num1;
+  if (num2 > max) {
+    max = num2;
+  }
+  if (num3 > max) {
+    max = num3;
+  }
+  print('The Max number is $max');
 }
