@@ -78,17 +78,37 @@ void main() {
   // }
 
   //#6 program to find the max number between 3 numbers
-  print('Enter three integers');
-  int num1 = int.parse(stdin.readLineSync()!);
-  int num2 = int.parse(stdin.readLineSync()!);
-  int num3 = int.parse(stdin.readLineSync()!);
+  // print('Enter three integers');
+  // int num1 = int.parse(stdin.readLineSync()!);
+  // int num2 = int.parse(stdin.readLineSync()!);
+  // int num3 = int.parse(stdin.readLineSync()!);
+  //
+  // int max = num1;
+  // if (num2 > max) {
+  //   max = num2;
+  // }
+  // if (num3 > max) {
+  //   max = num3;
+  // }
+  // print('The Max number is $max');
 
-  int max = num1;
-  if (num2 > max) {
-    max = num2;
+  // #7 program to print the Fibonacci series using iteration
+  int number;
+  print('Enter a number');
+  number = int.parse(stdin.readLineSync()!);
+
+  int reverseNumber = 0;
+  int temp = number;
+
+  while (temp > 0) {
+    int digit = temp % 10;
+    reverseNumber = reverseNumber * 10 + digit;
+    temp ~/= 10;
   }
-  if (num3 > max) {
-    max = num3;
+
+  if (number == reverseNumber) {
+    print('$number is a palindrome number');
+  } else {
+    print('$number is not a palindrome number');
   }
-  print('The Max number is $max');
 }
