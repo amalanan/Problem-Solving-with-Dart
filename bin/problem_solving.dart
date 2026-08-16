@@ -93,22 +93,33 @@ void main() {
   // print('The Max number is $max');
 
   // #7 program to print the Fibonacci series using iteration
-  int number;
-  print('Enter a number');
-  number = int.parse(stdin.readLineSync()!);
+  // int number;
+  // print('Enter a number');
+  // number = int.parse(stdin.readLineSync()!);
+  //
+  // int reverseNumber = 0;
+  // int temp = number;
+  //
+  // while (temp > 0) {
+  //   int digit = temp % 10;
+  //   reverseNumber = reverseNumber * 10 + digit;
+  //   temp ~/= 10;
+  // }
+  //
+  // if (number == reverseNumber) {
+  //   print('$number is a palindrome number');
+  // } else {
+  //   print('$number is not a palindrome number');
+  // }
 
-  int reverseNumber = 0;
-  int temp = number;
+  // #8 a program to find factorial of N number using for loop
+  int n;
+  print('Enter a number: ');
+  n = int.parse(stdin.readLineSync()!);
 
-  while (temp > 0) {
-    int digit = temp % 10;
-    reverseNumber = reverseNumber * 10 + digit;
-    temp ~/= 10;
+  int factorial = 1;
+  for (int i = 1; i <= n; i++) {
+    factorial *= i;
   }
-
-  if (number == reverseNumber) {
-    print('$number is a palindrome number');
-  } else {
-    print('$number is not a palindrome number');
-  }
+  print('Factorial of $n is $factorial');
 }
