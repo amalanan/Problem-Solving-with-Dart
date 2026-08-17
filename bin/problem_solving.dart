@@ -113,13 +113,25 @@ void main() {
   // }
 
   // #8 a program to find factorial of N number using for loop
-  int n;
-  print('Enter a number: ');
-  n = int.parse(stdin.readLineSync()!);
+  // int n;
+  // print('Enter a number: ');
+  // n = int.parse(stdin.readLineSync()!);
+  //
+  // int factorial = 1;
+  // for (int i = 1; i <= n; i++) {
+  //   factorial *= i;
+  // }
+  // print('Factorial of $n is $factorial');
 
-  int factorial = 1;
-  for (int i = 1; i <= n; i++) {
-    factorial *= i;
+  // #8 program to reverse an integer
+  print('Enter an integer');
+  int number = int.parse(stdin.readLineSync()!);
+
+  int reversedNumber = 0;
+  while (number != 0) {
+    int remainder = number % 10;
+    reversedNumber = reversedNumber * 10 + remainder;
+    number ~/= 10;
   }
-  print('Factorial of $n is $factorial');
+  print('The reversed integer is: $reversedNumber');
 }
