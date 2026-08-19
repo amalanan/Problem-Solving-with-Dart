@@ -142,4 +142,26 @@ void main() {
   //
   // String stringWithoutSpaces = inputString.replaceAll(' ', '');
   // print('String without spaces: $stringWithoutSpaces');
+
+  // 11th problem Search Insert Position
+  // Solution solution = Solution();
+  //
+  // List<int> nums = [1, 3, 5, 6];
+  // int target = 5;
+  //
+  // int result = solution.searchInsert(nums, target);
+  //
+  // print(result);
+
+}
+
+class Solution {
+  int searchInsert(List<int> nums, int target) {
+    for (int i = 0; i < nums.length; i++) {
+      if (nums[i] >= target) {
+        return i;
+      }
+    }
+    return nums.length;
+  }
 }
