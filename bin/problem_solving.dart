@@ -123,15 +123,23 @@ void main() {
   // }
   // print('Factorial of $n is $factorial');
 
-  // #8 program to reverse an integer
-  print('Enter an integer');
-  int number = int.parse(stdin.readLineSync()!);
+  // #9 program to reverse an integer
+  // print('Enter an integer');
+  // int number = int.parse(stdin.readLineSync()!);
+  //
+  // int reversedNumber = 0;
+  // while (number != 0) {
+  //   int remainder = number % 10;
+  //   reversedNumber = reversedNumber * 10 + remainder;
+  //   number ~/= 10;
+  // }
+  // print('The reversed integer is: $reversedNumber');
 
-  int reversedNumber = 0;
-  while (number != 0) {
-    int remainder = number % 10;
-    reversedNumber = reversedNumber * 10 + remainder;
-    number ~/= 10;
-  }
-  print('The reversed integer is: $reversedNumber');
+  // // #10 a program to remove blank space fro string
+  // String inputString;
+  // print('Enter a string: ');
+  // inputString = stdin.readLineSync()!;
+  //
+  // String stringWithoutSpaces = inputString.replaceAll(' ', '');
+  // print('String without spaces: $stringWithoutSpaces');
 }
