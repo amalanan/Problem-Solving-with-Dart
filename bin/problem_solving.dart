@@ -153,6 +153,26 @@ void main() {
   //
   // print(result);
 
+  int removeDuplicates(List<int> nums) {
+    if (nums.isEmpty) return 0;
+
+    int i = 0;
+
+    for (int j = 1; j < nums.length; j++) {
+      if (nums[j] != nums[i]) {
+        i++;
+        nums[i] = nums[j];
+      }
+    }
+
+    return i + 1;
+  }
+  List<int> nums = [1, 1, 2, 2, 3];
+
+  int k = removeDuplicates(nums);
+
+  print("Number of unique elements: $k");
+  print("Unique elements: ${nums.sublist(0, k)}");
 }
 
 class Solution {
