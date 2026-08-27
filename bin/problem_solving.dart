@@ -153,26 +153,98 @@ void main() {
   //
   // print(result);
 
-  int removeDuplicates(List<int> nums) {
-    if (nums.isEmpty) return 0;
+  // #12
+  // int removeDuplicates(List<int> nums) {
+  //   if (nums.isEmpty) return 0;
+  //
+  //   int i = 0;
+  //
+  //   for (int j = 1; j < nums.length; j++) {
+  //     if (nums[j] != nums[i]) {
+  //       i++;
+  //       nums[i] = nums[j];
+  //     }
+  //   }
+  //
+  //   return i + 1;
+  // }
+  // List<int> nums = [1, 1, 2, 2, 3];
+  //
+  // int k = removeDuplicates(nums);
+  //
+  // print("Number of unique elements: $k");
+  // print("Unique elements: ${nums.sublist(0, k)}");
 
-    int i = 0;
+  // #13th reverse an integer
+  // int reverseInteger(int x) {
+  //   int reversedNumber = 0;
+  //
+  //   while (x != 0) {
+  //     int digit = x % 10;
+  //     reversedNumber = reversedNumber * 10 + digit;
+  //     x ~/= 10;
+  //   }
+  //   return reversedNumber;
+  // }
+  //
+  // int num = 12345;
+  // int reversedNum = reverseInteger(num);
+  // print(num);
+  // print(reversedNum);
 
-    for (int j = 1; j < nums.length; j++) {
-      if (nums[j] != nums[i]) {
-        i++;
-        nums[i] = nums[j];
-      }
+  // #14th
+  // List<int> list1 = [1, 3, 5, 7];
+  // List<int> list2 = [2, 4, 6, 8];
+  //
+  // List<int> mergedList = mergedSortedLists(list1, list2);
+  // print(mergedList);
+
+  // #15 Dart Programing Problem Solving: Longest Common Prefix
+  // List<String> strs = ["flower", "flow", "flight"];
+  //
+  // String result = longestCommonPrefix(strs);
+  //
+  // print(result);
+
+}
+
+String longestCommonPrefix(List<String> strs) {
+  if (strs.isEmpty) return "";
+
+  String prefix = strs[0];
+
+  for (int i = 1; i < strs.length; i++) {
+    while (!strs[i].startsWith(prefix)) {
+      prefix = prefix.substring(0, prefix.length - 1);
+
+      if (prefix.isEmpty) return "";
     }
-
-    return i + 1;
   }
-  List<int> nums = [1, 1, 2, 2, 3];
 
-  int k = removeDuplicates(nums);
+  return prefix;
+}
 
-  print("Number of unique elements: $k");
-  print("Unique elements: ${nums.sublist(0, k)}");
+List<int> mergedSortedLists(List<int> list1, List<int> list2) {
+  List<int> mergedList = [];
+  int i = 0, j = 0;
+  while (i < list1.length && j < list2.length) {
+    if (list1[i] < list2[j]) {
+      mergedList.add(list1[i]);
+      i++;
+    } else {
+      mergedList.add(list2[j]);
+      j++;
+    }
+  }
+  while (i < list1.length) {
+    mergedList.add(list1[i]);
+    i++;
+  }
+  while (i < list2.length) {
+    mergedList.add(list2[i]);
+    j++;
+  }
+  return mergedList;
 }
 
 class Solution {
