@@ -205,7 +205,6 @@ void main() {
   // String result = longestCommonPrefix(strs);
   //
   // print(result);
-
 }
 
 String longestCommonPrefix(List<String> strs) {
